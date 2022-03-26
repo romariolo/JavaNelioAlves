@@ -2,9 +2,13 @@ package Entities;
 
 public class Product {
 
-	public String nome;
-	public double price;
-	public int quantity;
+	private String nome;
+	private double price;
+	private int quantity;
+	
+	public Product() {
+		
+	}
 
 	public Product (String nome, double price, int quantity) {
 		this.nome =nome;
@@ -13,6 +17,11 @@ public class Product {
 		
 	}
 	
+	public Product (String nome, double price) {
+		this.nome =nome;
+		this.price = price;
+	
+	}
 	
 	public double totalValue() {
 
@@ -54,9 +63,7 @@ public class Product {
 		return quantity;
 	}
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
 
 	public String toString() {
 		return nome

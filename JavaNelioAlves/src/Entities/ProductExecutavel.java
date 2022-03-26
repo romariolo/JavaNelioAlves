@@ -11,21 +11,26 @@ public class ProductExecutavel {
 
 		Scanner sc = new Scanner(System.in);
 		
+		Product p = new Product();
+		
 		System.out.print("Nome do produto: ");
 		String nome = sc.nextLine();
 		System.out.print("Valor:");
 		double price = sc.nextDouble();
-		System.out.print("Quantidade :");
-		int quantity = sc.nextInt();
 		
-		Product product = new Product(nome, price, quantity);
-
+		
+		
+        Product product = new Product(nome, price);
+        product.setNome("TV8k");
+        product.setPrice(1200);
+        System.out.println("Update name product :" + product.getNome());
+        System.out.println("Update price product :" + product.getPrice());
 		System.out.println();
 		System.out.println("Status :" + product);
 
 		System.out.println("Quantos produtos deseja adicionar?");
 
-		quantity = sc.nextInt();
+		int quantity = sc.nextInt();
 
 		product.addProducts(quantity);
 
